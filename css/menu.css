@@ -1,6 +1,3 @@
-/* Default mobile-first styles */
-
-/* Ensure body background and text remains consistent on all screens */
 body {
     background: url(https://e0.pxfuel.com/wallpapers/51/641/desktop-wallpaper-chill-fox-music-chill-beats-you-ll-love-for-computer-background-chill-cool-for-computer-chill-aesthetic.jpg) no-repeat;
     background-size: cover;
@@ -9,46 +6,47 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Menu-bar for mobile screens */
 .menu-bar {
-    height: auto;
-    width: 100%;
-    position: relative;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
     background: rgba(0, 0, 0, 0.7);
-    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    border-right: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: white;
     transition: width 0.3s;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
 }
 
 .menu-bar nav ul {
     list-style: none;
-    text-align: center;
+    padding: 0;
 }
 
 .menu-bar nav ul li {
-    margin: 10px 0;
+    padding: 15px;
+    text-align: left;
 }
 
 .menu-bar nav ul li a {
     text-decoration: none;
     color: #cccccc;
-    padding: 10px;
-    display: inline-block;
+    display: block;
 }
 
 .menu-bar nav ul li a:hover {
     color: #1DB954;
 }
 
-/* Main content */
 .main-content {
+    margin-left: 270px;
     padding: 20px;
-    margin-top: 80px; /* Add space for the fixed menu on mobile */
+    margin-top: 20px;
 }
 
-/* Header */
 .main-content header {
     background-color: #1DB954;
     padding: 20px;
@@ -64,7 +62,7 @@ body {
 
 .search-container input {
     padding: 10px;
-    width: 200px; /* Adjusted for smaller screens */
+    width: 200px;
     border: none;
     border-radius: 5px;
 }
@@ -83,7 +81,6 @@ body {
     background-color: #1aa34a;
 }
 
-/* Music frame layout */
 .big-frame {
     width: 100%;
     height: 500px;
@@ -94,7 +91,6 @@ body {
     padding: 10px;
 }
 
-/* Music frame container (for responsiveness) */
 .music-frame-container {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +98,7 @@ body {
 }
 
 .music-frame {
-    flex: 0 1 calc(33.33% - 10px); /* 3 frames per row on small screens */
+    flex: 0 1 calc(33.33% - 10px);
     margin: 5px;
     padding: 10px;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -128,24 +124,12 @@ body {
     color: white;
 }
 
-/* Tablet view */
-@media (min-width: 768px) {
-    .music-frame {
-        flex: 0 1 calc(25% - 10px); /* 4 frames per row on tablets */
-    }
-
-    .search-container input {
-        width: 250px; /* Adjusted for medium screens */
-    }
-}
-
-/* Desktop view */
 @media (min-width: 1024px) {
     .music-frame {
-        flex: 0 1 calc(16.66% - 10px); /* 6 frames per row on desktops */
+        flex: 0 1 calc(20% - 10px);
     }
 
     .search-container input {
-        width: 300px; /* Adjusted for larger screens */
+        width: 350px;
     }
 }
