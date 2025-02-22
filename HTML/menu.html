@@ -31,7 +31,7 @@
                     <div class="music-frame">
                         <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 1" />
                         <p>Mất kết nối</p>
-                        <button class="play-button" data-src="../mp3/Dương Domic - Mất Kết Nối  EP 'Dữ Liệu Quý'.mp3">Play</button>
+                        <button onclick="(e) => handlePause(e)" class="play-button" data-src="../mp3/Dương Domic - Mất Kết Nối  EP 'Dữ Liệu Quý'.mp3">Play</button>
                     </div>
                     <div class="music-frame">
                         <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 2" />
@@ -116,48 +116,20 @@
         <p>&copy; 2025 Free Music. All rights reserved.</p>
     </footer>
     <audio id="audio-player"></audio>
-</body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const audioPlayer = document.getElementById("audio-player");
-        const playButtons = document.querySelectorAll(".play-button");
-        let currentPlayingButton = null;
+    <script>
+        const audio = document.getElementById('audio');
 
-        playButtons.forEach(button => {
-            button.addEventListener("click", function () {
-                const audioSrc = this.getAttribute("data-src");
-
-                if (!audioSrc) {
-                    alert("Chưa có file nhạc cho bài hát này!");
-                    return;
-                }
-
-                if (audioPlayer.src.endsWith(audioSrc) && !audioPlayer.paused) {
-                    audioPlayer.pause();
-                    this.textContent = "Play";
-                    currentPlayingButton = null;
-                } else {
-                    if (!audioPlayer.src.endsWith(audioSrc)) {
-                        audioPlayer.src = audioSrc;
-                    }
-                    audioPlayer.play();
-                    this.textContent = "Pause";
-
-                    if (currentPlayingButton && currentPlayingButton !== this) {
-                        currentPlayingButton.textContent = "Play";
-                    }
-                    
-                    currentPlayingButton = this;
-                }
-            });
-        });
-
-        audioPlayer.addEventListener("ended", function () {
-            if (currentPlayingButton) {
-                currentPlayingButton.textContent = "Play";
-                currentPlayingButton = null;
+        function handlePause(e){
+            const audio_src = e.target;
+            console.log(audio_src)
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = 'Pause';
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = 'Play';
             }
-        });
-    });
-</script>
+        }
+    </script>
+</body>
 </html>

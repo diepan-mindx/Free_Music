@@ -1,64 +1,51 @@
-// lay thong tin nguoi dung nhap vao form => kiem tra thong tin
-function validateForm(username, password) {
-  // kiem tra rong
+//lay thong tinh nguoi dung nhap vao from//
+function validateFrom(username, password) {
+  //kiem tra rong
   if (username == "" || password == "") {
-    alert("You need to fill all fields!");
+    alert("you need to fell all fields!");
     return false;
   }
-  // tao bien kiem tra cu phap
-  const email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  }
-  // kiem tra format password
+  //kiem tra format password
   if (password.length < 6) {
-    alert("Password needs least 6 letters!");
+    alert("pass needs least 6 letters!");
     return false;
   }
-  // kiem tra do dai username
-  if (username.length < 5) {
-    alert("Username needs least 5 letters!");
+  //kiem tra do dai user name
+  if (username.length < 6) {
+    alert("pass needs least 5 letters!");
     return false;
   }
-  return true; // du lieu chinh xac
+  return true;
+}
 
-// luu vao local storage => kiem tra trang thai co login chua
+//luu vao local strore=> kiem tra trang thai co login chua
 function checkLoginAccount(defaultAccount) {
-  // lay du lieu tu form HTML (element)
-  // [HTML DOM]: mỗi tag trong html </> được gọi là element
-  // document: lấy toàn bộ code trong file HTML đã được liên kết (thông qua tag script)
-  // getElementById: lấy tag html thông qua thuộc tính id (vd: <input id="a"/>)
-  const email = document.getElementById("login-email").value.trim();
-  const password = document.getElementById("login-password").value.trim();
-  const username = document.getElementById("login-username").value.trim();
-
-  // kiem tra form
-  if (validateForm(username, email, password)) {
-    // so sanh du lieu nhap vao voi du lieu trong may co san
-    if (defaultAccount.email == email) {
-      // dung email -> so sanh password
+  //lay du lieu tu from html
+  const password = document.getElementById("password").value.trim();
+  const username = document.getElementById("username").value.trim();
+  //kiem tra from
+  if (validateFrom(username, password)) {
+    if (defaultAccount.username == username) {
       if (defaultAccount.password == password) {
-        alert("Login successfully!");
-        // chuyen sang index
-        location.href = "../index.html";
-        return; // kiem tra xong -> thoat ham -> khong lam gi them
+        // dang nhap thanh cong => luu tru du lieu
+        localStorage.setItem("currentUser", username);
+        location.href = "./html/menu.html";
       } else {
-        // sai password
         alert("Password is incorrect!");
         return;
       }
     } else {
-      // sai email
-      alert("Email is not exist in database, please change to signup form!");
+      alert("Username is not exist is database, please sign up");
       return;
     }
-  } else return; // sai du lieu nhap vao -> khong lam gi them
+  } else return;
 }
-
-// bat su kien cho button login
-document.getElementById("login-button").addEventListener("click", function (event) {
-  // chan event mac dinh
-  event.preventDefault();
-  //lay lai du lieu tai khoan mac dinh tronf local storage
-  // getItem: tra ve du lieu JSON -> su dugn ham parse() chuyen thanh kieu du lieu js
-  const defaultAccount = this.localStorage.getItem('defaulAccont');
-  checkLoginAccount();
-});
+document
+  .getElementById("login-button")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    //lay lai du lieu tai khoan nac dinh trong local storage
+    // getItem: tra ve du Lieu json -> su dung ham parse() chuyen thanh kieu du Lieu js
+    const defaultAccount = JSON.parse(localStorage.getItem("defaultAccount"));
+    checkLoginAccount(defaultAccount);
+  });

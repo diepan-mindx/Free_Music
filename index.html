@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-    <script src="./js/mange_account.js"></script>
+<div class="wrapper">
+    <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" id="username" placeholder="Username" required>
+            <i class="bx bxs-user"></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">forgot password</a>
+        </div>
+
+        <button type="button" id="login-button" class="btn">Login</button>
+
+        <div class="register-link">
+            <p>Don't have an account <a href="./html/register.html">Register</a></p>
+        </div>
+    </form>
+</div>
+<script src="./js/mange_account.js"></script>
+<script src="../js/login.js"></script>
 </body>
-</html>
+</html> 
