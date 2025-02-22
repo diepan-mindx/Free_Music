@@ -133,3 +133,47 @@ body {
         width: 350px;
     }
 }
+
+@media (max-width: 768px) {
+    .menu-bar {
+        width: 100px;
+        padding-top: 10px;
+    }
+
+    .menu-bar nav ul li {
+        text-align: center;
+    }
+
+    .menu-bar nav ul li a {
+        font-size: 14px;
+    }
+
+    .main-content {
+        margin-left: 120px;
+    }
+
+    .music-frame {
+        flex: 0 1 calc(50% - 10px); /* Chia thành 2 cột */
+    }
+
+    .search-container input {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .search-container button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .music-frame-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
+        gap: 10px; /* Khoảng cách giữa các khung */
+    }
+
+    .music-frame {
+        width: 100%;
+    }
+}
+

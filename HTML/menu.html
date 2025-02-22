@@ -8,11 +8,10 @@
 </head>
 <body>
     <div class="menu-bar">
+        <div class="hamburger" onclick="toggleMenu()"></div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Your Library</a></li>
             </ul>
         </nav>
     </div>
@@ -31,127 +30,134 @@
                     <!-- Repeat this block for more frames -->
                     <div class="music-frame">
                         <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 1" />
-                        <p>Frame 1</p>
+                        <p>Mất kết nối</p>
+                        <button class="play-button" data-src="../mp3/Dương Domic - Mất Kết Nối  EP 'Dữ Liệu Quý'.mp3">Play</button>
+                    </div>
+                    <div class="music-frame">
+                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 2" />
+                        <p>Đừng làm trái tim anh đau</p>
+                        <button class="play-button" data-src="../mp3/SƠN TÙNG M-TP  ĐỪNG LÀM TRÁI TIM ANH ĐAU  OFFICIAL MUSIC VIDEO.mp3">Play</button>
+                    </div>
+                    <div class="music-frame">
+                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 3" />
+                        <p>Hào quang</p>
+                        <button class="play-button" data-src="../mp3/HÀO QUANG - Rhyder, Dương Domic, Pháp Kiều bùng nổ cảm xúc  Anh Trai Say Hi [Performance].mp3">Play</button>
+                    </div>
+                    <div class="music-frame">
+                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 4" />
+                        <p>Chúng ta của tương lai</p>
+                        <button class="play-button" data-src="../mp3/SƠN TÙNG M-TP  CHÚNG TA CỦA TƯƠNG LAI  OFFICIAL MUSIC VIDEO.mp3">Play</button>
+                    </div>
+                    <div class="music-frame">
+                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 5" />
+                        <p>Nơi này có anh</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 2" />
-                        <p>Frame 2</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 3" />
-                        <p>Frame 3</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 4" />
-                        <p>Frame 4</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 5" />
-                        <p>Frame 5</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 6" />
-                        <p>Frame 6</p>
+                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 6" />
+                        <p>Sao hạng A</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
                         <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 1" />
-                        <p>Frame 7</p>
+                        <p>Tràn bộ nớ</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 2" />
-                        <p>Frame 8</p>
+                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 2" />
+                        <p>Trói em lại</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 3" />
-                        <p>Frame 9</p>
+                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 3" />
+                        <p>Âm thầm bên em</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 4" />
-                        <p>Frame 10</p>
+                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 4" />
+                        <p>Tình đầu quá chén</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 5" />
-                        <p>Frame 11</p>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 5" />
+                        <p>Chập chờn</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
                         <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 6" />
-                        <p>Frame 12</p>
+                        <p>Pin dự phòng</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
                         <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 7" />
-                        <p>Frame 13</p>
+                        <p>Yêu em hai ngày</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 8" />
-                        <p>Frame 14</p>
+                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 8" />
+                        <p>Chúng ta của hiện tại</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 9" />
-                        <p>Frame 15</p>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 9" />
+                        <p>A đến Ă</p>
                         <button type="button">Play</button>
                     </div>
                     <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 10" />
-                        <p>Frame 16</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 11" />
-                        <p>Frame 17</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 12" />
-                        <p>Frame 18</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 13" />
-                        <p>Frame 19</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 14" />
-                        <p>Frame 20</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 15" />
-                        <p>Frame 21</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 16" />
-                        <p>Frame 22</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://via.placeholder.com/100" alt="Music 17" />
-                        <p>Frame 23</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 18" />
-                        <p>Frame 24</p>
+                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 10" />
+                        <p>Muộn rồi mà sao còn</p>
                         <button type="button">Play</button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <footer>
+        <p>&copy; 2025 Free Music. All rights reserved.</p>
+    </footer>
+    <audio id="audio-player"></audio>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const audioPlayer = document.getElementById("audio-player");
+        const playButtons = document.querySelectorAll(".play-button");
+        let currentPlayingButton = null;
+
+        playButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const audioSrc = this.getAttribute("data-src");
+
+                if (!audioSrc) {
+                    alert("Chưa có file nhạc cho bài hát này!");
+                    return;
+                }
+
+                if (audioPlayer.src.endsWith(audioSrc) && !audioPlayer.paused) {
+                    audioPlayer.pause();
+                    this.textContent = "Play";
+                    currentPlayingButton = null;
+                } else {
+                    if (!audioPlayer.src.endsWith(audioSrc)) {
+                        audioPlayer.src = audioSrc;
+                    }
+                    audioPlayer.play();
+                    this.textContent = "Pause";
+
+                    if (currentPlayingButton && currentPlayingButton !== this) {
+                        currentPlayingButton.textContent = "Play";
+                    }
+                    
+                    currentPlayingButton = this;
+                }
+            });
+        });
+
+        audioPlayer.addEventListener("ended", function () {
+            if (currentPlayingButton) {
+                currentPlayingButton.textContent = "Play";
+                currentPlayingButton = null;
+            }
+        });
+    });
+</script>
 </html>
