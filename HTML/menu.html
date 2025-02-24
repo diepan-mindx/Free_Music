@@ -1,135 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>free music</title>
-    <link rel="stylesheet" href="../css/menu.css"> <!-- Link to your CSS file -->
-</head>
-<body>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="../css/menu.css" />
+  </head>
+  <body>
     <div class="menu-bar">
-        <div class="hamburger" onclick="toggleMenu()"></div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </nav>
+      <div class="hamburger" onclick="toggleMenu()"></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </nav>
     </div>
     <div class="main-content">
-        <header>
-            <h1>Welcome to Free Music</h1>
-        </header>
-        <div class="search-container">
-            <input type="text" placeholder="Search for anything..." />
-            <button type="button">Search</button>
-        </div>
-        <main>
-            <h2>Propose</h2>
-            <div class="big-frame">
-                <div class="music-frame-container">
-                    <!-- Repeat this block for more frames -->
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 1" />
-                        <p>Mất kết nối</p>
-                        <button onclick="(e) => handlePause(e)" class="play-button" data-src="../mp3/Dương Domic - Mất Kết Nối  EP 'Dữ Liệu Quý'.mp3">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 2" />
-                        <p>Đừng làm trái tim anh đau</p>
-                        <button class="play-button" data-src="../mp3/SƠN TÙNG M-TP  ĐỪNG LÀM TRÁI TIM ANH ĐAU  OFFICIAL MUSIC VIDEO.mp3">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 3" />
-                        <p>Hào quang</p>
-                        <button class="play-button" data-src="../mp3/HÀO QUANG - Rhyder, Dương Domic, Pháp Kiều bùng nổ cảm xúc  Anh Trai Say Hi [Performance].mp3">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 4" />
-                        <p>Chúng ta của tương lai</p>
-                        <button class="play-button" data-src="../mp3/SƠN TÙNG M-TP  CHÚNG TA CỦA TƯƠNG LAI  OFFICIAL MUSIC VIDEO.mp3">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 5" />
-                        <p>Nơi này có anh</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 6" />
-                        <p>Sao hạng A</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 1" />
-                        <p>Tràn bộ nớ</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 2" />
-                        <p>Trói em lại</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 3" />
-                        <p>Âm thầm bên em</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj" alt="Music 4" />
-                        <p>Tình đầu quá chén</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 5" />
-                        <p>Chập chờn</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 6" />
-                        <p>Pin dự phòng</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 7" />
-                        <p>Yêu em hai ngày</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 8" />
-                        <p>Chúng ta của hiện tại</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b" alt="Music 9" />
-                        <p>A đến Ă</p>
-                        <button type="button">Play</button>
-                    </div>
-                    <div class="music-frame">
-                        <img src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj" alt="Music 10" />
-                        <p>Muộn rồi mà sao còn</p>
-                        <button type="button">Play</button>
-                    </div>
-                </div>
+      <header>
+        <h1>Welcome to Free Music</h1>
+      </header>
+      <div class="search-container">
+        <input type="text" placeholder="Search for anything..." />
+        <button type="button">Search</button>
+      </div>
+      <main>
+        <h2>Propose</h2>
+        <div class="big-frame">
+          <div class="music-frame-container">
+            <!-- Repeat this block for more frames -->
+            <!-- Music 1 -->
+            <div class="music-frame">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b"
+                alt="Music 1"
+              />
+              <audio>
+                <source src="../mp3/matketnoi.mp3" type="audio/mpeg" />
+              </audio>
+              <p>Mất kết nối</p>
+              <button type="button" class="play-button">Play</button>
             </div>
-        </main>
+
+            <!-- Music 2 -->
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 2"
+              />
+              <audio>
+                <source
+                  src="../mp3/dunglamtraitimanhdau.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <p>Đừng làm trái tim anh đau</p>
+              <button type="button" class="play-button">Play</button>
+            </div>
+
+            <!-- Music 3 -->
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 3"
+              />
+              <audio>
+                <source src="../mp3/haoquang.mp3" type="audio/mpeg" />
+              </audio>
+              <p>Hào quang</p>
+              <button type="button" class="play-button">Play</button>
+            </div>
+
+            <!-- Music 4 -->
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 4"
+              />
+              <audio>
+                <source src="../mp3/chungtacuatuonglai.mp3" type="audio/mpeg" />
+              </audio>
+              <p>Chúng ta của tương lai</p>
+              <button type="button" class="play-button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 5"
+              />
+              <p>Nơi này có anh</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 6"
+              />
+              <p>Sao hạng A</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b"
+                alt="Music 1"
+              />
+              <p>Tràn bộ nớ</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 2"
+              />
+              <p>Trói em lại</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 3"
+              />
+              <p>Âm thầm bên em</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/7bE0ZUBZieBXXAsyo6MkQgPoYOxIXzCLQ5ApMimk_W3F5DjyPmQsdWzYxcIMQ6wmGA6-n8rI=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 4"
+              />
+              <p>Tình đầu quá chén</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b"
+                alt="Music 5"
+              />
+              <p>Chập chờn</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b"
+                alt="Music 6"
+              />
+              <p>Pin dự phòng</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b"
+                alt="Music 7"
+              />
+              <p>Yêu em hai ngày</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 8"
+              />
+              <p>Chúng ta của hiện tại</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02aa8b2071efbaa7ec3f41b60b"
+                alt="Music 9"
+              />
+              <p>A đến Ă</p>
+              <button type="button">Play</button>
+            </div>
+            <div class="music-frame">
+              <img
+                src="https://yt3.googleusercontent.com/c-Z7mIlntSpG6VyQ5ZqaPggqkZRhaySr-H5ZEazFN2iR1pP4eD1UGekwu0y--c4CSVhJJ1A4QT8=s160-c-k-c0x00ffffff-no-rj"
+                alt="Music 10"
+              />
+              <p>Muộn rồi mà sao còn</p>
+              <button type="button">Play</button>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
     <footer>
-        <p>&copy; 2025 Free Music. All rights reserved.</p>
+      <p>&copy; 2025 Free Music. All rights reserved.</p>
     </footer>
-    <audio id="audio-player"></audio>
-    <script>
-        const audio = document.getElementById('audio');
 
-        function handlePause(e){
-            const audio_src = e.target;
-            console.log(audio_src)
-            if (audio.paused) {
-                audio.play();
-                playPauseBtn.textContent = 'Pause';
+    <script>
+      // Lắng nghe sự kiện khi toàn bộ nội dung HTML đã tải xong
+      document.addEventListener("DOMContentLoaded", function () {
+        // Chọn tất cả các nút có class "play-button" và duyệt qua từng cái một
+        document.querySelectorAll(".play-button").forEach((button) => {
+          // Thêm sự kiện "click" cho từng nút play
+          button.addEventListener("click", function () {
+            const audio_source = button.closest("div").querySelector("audio"); // từ button lấy ra cha => cha lấy ra element audio để play/ pause
+            // Nếu nhạc đang tạm dừng, phát bài hát
+            console.log(this.textContent);
+            if (this.textContent === "Play") {
+                // bấm 1 nút thì phải dừng toàn bộ các nút khác
+                changeButtonText();
+                turnoffAllAudio();
+                audio_source.closest("audio").play(); // play nhac
+              this.textContent = "Pause"; // Đổi chữ trên nút thành "Pause"
             } else {
-                audio.pause();
-                playPauseBtn.textContent = 'Play';
+              audio_source.closest("audio").pause(); // Nếu nhạc đang chạy, tạm dừng
+              this.textContent = "Play"; // Đổi chữ trên nút thành "Play"
             }
+          });
+        });
+
+        // các hàm hỗ trợ
+        function changeButtonText() {
+          document.querySelectorAll(".play-button").forEach((button) => {
+            button.textContent = "Play";
+          });
         }
+        function turnoffAllAudio() {
+          document.querySelectorAll("audio").forEach((audio) => {
+            audio.pause();
+          });
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
